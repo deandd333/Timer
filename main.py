@@ -1,0 +1,24 @@
+import logging
+import sys
+
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication
+
+from windows import MainWindow
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+)
+
+
+def main() -> int:
+    app = QApplication(sys.argv)
+    app.setWindowIcon(QIcon("clock.png"))
+    window = MainWindow()
+    window.show()
+    return app.exec_()
+
+
+if __name__ == "__main__":
+    sys.exit(main())
