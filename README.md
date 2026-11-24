@@ -31,5 +31,5 @@
 
 
 ## 🚀 Установка и запуск
-* pip install PyQt5
+* pip install -r requirements.txt
 * python main.py
